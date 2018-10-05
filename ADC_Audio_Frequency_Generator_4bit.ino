@@ -1,3 +1,4 @@
+// Arduino Uno
 // converts the position of a 10k lin(B) pot to 0-8 binary, and then displays the bits with 4 LEDs
 // pot connected to A0, 5volt and ground
 // dw 1K or 10K pot, both work equally well, 4 LED's
