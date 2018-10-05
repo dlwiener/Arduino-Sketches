@@ -2,6 +2,8 @@
 // pot connected to A0, 5volt and ground
 // dw 1K or 10K pot, both work equally well, 4 LED's
 // pin 4 tone output to speaker
+// dw modified code originally written by Wawa in post #7:
+// https://forum.arduino.cc/index.php?topic=563631.msg3844251#msg3844251
 
 int rawValue; // raw reading
 int oldValue; // for deadband
