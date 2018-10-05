@@ -16,7 +16,7 @@ void setup() {
 }
 
 void loop() {
-  // rawValue = analogRead(A0); // dummy read, if needed
+  
   rawValue = analogRead(A0) + 10; // read pot  dw: added "+ 10" a bit to get binary 8 to light up
   if (rawValue < (oldValue - 2) || rawValue > (oldValue + 2)) { // add some deadband
     oldValue = rawValue; // update value
@@ -31,10 +31,7 @@ void loop() {
       digitalWrite(6, (Byte & 2));
       digitalWrite(7, (Byte & 4));
       digitalWrite(8, (Byte & 8));
-      //digitalWrite(9, (Byte & 16));
-      //digitalWrite(10, (Byte & 32));
-      //digitalWrite(11, (Byte & 64));
-      //digitalWrite(12, (Byte & 128));
+     
       freq = map(Byte, 0, 8, 0, 2000);  
       Serial.print("Tone frequency: ");
       Serial.print(freq);
