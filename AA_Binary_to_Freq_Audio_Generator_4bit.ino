@@ -19,7 +19,7 @@ void setup() {
 
 void loop() {
   
-  rawValue = analogRead(A0) + 10; // read pot  dw: added "+ 10" a bit to get binary 8 to light up
+  rawValue = analogRead(A0) + 10; // read pot  dw: added "+ 10" to get binary 8 LED to light up at end of pot rotation
   if (rawValue < (oldValue - 2) || rawValue > (oldValue + 2)) { // add some deadband
     oldValue = rawValue; // update value
     Byte = oldValue >> 7; // convert 10-bit to 4-bit
