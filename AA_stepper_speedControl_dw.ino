@@ -1,3 +1,5 @@
+//Motor Gets Hot if run too long (>2 minutes)!
+
 #include <Stepper.h>
 
 // Number of steps per revolution of INTERNAL motor in 4-step mode
