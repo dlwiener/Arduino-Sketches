@@ -63,9 +63,10 @@ void runMotor(int MaxSpeed, int Acceleration, int newPos, int j)
     stepper2.setAcceleration(Acceleration);
     stepper2.runToNewPosition(newPos);
     stepper2.stop();
-    delay(3000);
+    delay(1500);           // pause after CW
     stepper2.runToNewPosition(0);
-    delay(3000);
+    stepper2.stop();
+    delay(1500);     //pause after CCW
   }
 
 }
@@ -80,37 +81,37 @@ void runAuto(int runID)
       runMotor(250, 25, -2048, 2);  //runMotor(int MaxSpeed, int Acceleration, int newPos, int j)
 
       delay(10);
-
+      stepper2.disableOutputs();   // stops motor from overheating when off
       runID = 0; // reset run ID for next run choice
       low_Flag = HIGH;
       break;
 
     case 2:    // medium speed
 
-      runMotor(500, 50, -2048, 2);  //runMotor(int MaxSpeed, int Acceleration, int newPos, int j)
+      runMotor(1000, 100, -2048, 2);  //runMotor(int MaxSpeed, int Acceleration, int newPos, int j)
 
       delay(10);
-
+      stepper2.disableOutputs();   // stops motor from overheating when off
       runID = 0; // reset run ID for next run choice
       medium_Flag = HIGH;
       break;
 
     case 3:   //  high speed
 
-      runMotor(750, 75, -2048, 2);  //runMotor(int MaxSpeed, int Acceleration, int newPos, int j)
+      runMotor(2000, 200, -2048, 2);  //runMotor(int MaxSpeed, int Acceleration, int newPos, int j)
 
       delay(10);
-
+      stepper2.disableOutputs();   // stops motor from overheating when off
       runID = 0; // reset run ID for next run choice
       high_Flag = HIGH;
       break;
 
     case 4:   // ultra speed
 
-      runMotor(1000, 100, -2048, 2);  //runMotor(int MaxSpeed, int Acceleration, int newPos, int j)
+      runMotor(3000, 300, -2048, 2);  //runMotor(int MaxSpeed, int Acceleration, int newPos, int j)
 
       delay(10);
-
+      stepper2.disableOutputs();   // stops motor from overheating when off
       runID = 0; // reset run ID for next run choice
       ultra_Flag = HIGH;
       break;
