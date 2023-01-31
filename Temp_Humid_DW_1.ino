@@ -21,8 +21,8 @@ DHT dht(DHTPIN, DHTTYPE); // Initialize the DHT sensor
 /*----------------------------------------------------------*/
 
 /*-----------------ESP8266 Serial WiFi Module---------------*/
-#define SSID "TP-LINK_01B1"     // "SSID-WiFiname" 
-#define PASS "rorydog54"       // "password"
+#define SSID "Type Your Wi-Fi Network Name Here"     // "SSID-WiFiname" 
+#define PASS "Type Your WiFi Password Here"       // "password"
 #define IP "184.106.153.149"// thingspeak.com ip
 String msg = "GET /update?key=S74VUNQAAMIE8HKI"; //change it with your key...
 /*-----------------------------------------------------------*/
